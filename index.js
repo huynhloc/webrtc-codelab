@@ -15,6 +15,16 @@ var fileServer = new nodeStatic.Server();
 var app = http.createServer().listen(8080);
 
 var io = socketIO.listen(app);
+
+io.set("origins", ":");
+io.set("transports", [
+  "websocket",
+  "flashsocket",
+  "htmlfile",
+  "xhr-polling",
+  "jsonp-polling"
+]);
+
 io.sockets.on("connection", function(socket) {
   // convenience function to log server messages on the client
   function log() {
