@@ -28,8 +28,7 @@ var room = "foo";
 // Could prompt for room name:
 room = prompt("Enter room name:");
 
-// var socket = io.connect("http://localhost:8080");
-var socket = io.connect("https://webrtc-codelab-62kcxc3pq.now.sh");
+var socket = io.connect();
 
 if (room !== "") {
   socket.emit("create or join", room);
