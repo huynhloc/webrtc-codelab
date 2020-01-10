@@ -9,5 +9,8 @@
     "node-static": "^0.7.10",
     "socket.io": "^1.2.0",
     "webpack": "^4.41.5"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
